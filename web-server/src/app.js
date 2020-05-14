@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
-const forcast = require('./uti/forcast.js');
+const forcast= require('./uti/forcast.js');
 
 const app = express();
 
@@ -53,13 +53,13 @@ app.get('/weather', (req, res)=>{
     
     forcast(req.query.city, (err, forcast)=>{
         if (err){
-            return res.send({ err })
+        return res.send({ err })
         }
         res.send({
-            forcast: forcast,
-            address: req.query.city
+            forcast: forcast
         })
     })
+    
 })  
  
 
