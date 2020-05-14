@@ -16,7 +16,9 @@ weatform.addEventListener('submit', (e)=>{
         fetch(`/weather?city=${location}`).then((res)=>{
             res.json().then((data)=>{
                 if(data.err){
-                    message.textContent=data.err
+                    message.textContent=''
+                    message2.textContent=data.err
+                    icon.src = ''
                 } else {
                     
                     message.textContent=data.forcast.c
