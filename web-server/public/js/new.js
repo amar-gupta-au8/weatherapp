@@ -8,7 +8,7 @@ weatform.addEventListener('submit', (e)=>{
     e.preventDefault()
     const location = search.value
     if (location) {
-        fetch(`http://127.0.0.1:3000/weather?city=${location}`).then((res)=>{
+        fetch(`/weather?city=${location}`).then((res)=>{
             res.json().then((data)=>{
                 if(data.err){
                     message.textContent=data.err

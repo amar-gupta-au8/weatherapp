@@ -5,6 +5,8 @@ const forcast = require('./uti/forcast.js');
 
 const app = express();
 
+const port = process.env.PORT || 3000
+
 //Define path for express config
 const publicDirPath = path.join(__dirname, '../public')
 const viewPath = path.join(__dirname, '../templates/views')
@@ -75,8 +77,6 @@ app.get('/weather', (req, res)=>{
      })
  })
  
-app.listen(3000, ()=>{
-    console.log('http://127.0.0.1:3000')
-}) 
-
-
+app.listen(port, ()=>{
+    console.log('http://127.0.0.1:'+port)
+})
