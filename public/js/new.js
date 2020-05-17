@@ -4,11 +4,6 @@ const message = document.querySelector('#forcast')
 const message2 = document.querySelector('#weather')
 const icon = document.querySelector('#myimg')
 
-
-
-
-
-
 weatform.addEventListener('submit', (e)=>{
     e.preventDefault()
     const location = search.value
@@ -21,6 +16,7 @@ weatform.addEventListener('submit', (e)=>{
                     icon.src = ''
                 } else {
                     
+    
                     message.textContent=data.forcast.c
                     message2.textContent=data.forcast.a
                     icon.src = data.forcast.b
